@@ -1,37 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div>
-        <h1 class="name">Tobias Rumiz</h1>
-        <p>work in progress... Portfolio not ready</p>
-        <p>Mientras tanto, te dejo unos proyectos que hice para la facu</p>
-        <ul class="project_list">
-            <li class="project">
-                <img class="project_image" src="screenshot-ChangoOnline.jpg" alt="Screenshot ChangoOnline">
-                <div class="project_title">
-                    <h2>Chango Online</h2>
-                    <a href="https://ruminini.github.io/ChangoOnline/"><img src="deploy-icon.svg" alt="deploy icon"></a>
-                    <a href="https://github.com/Ruminini/ChangoOnline"><img src="repo-icon.svg" alt="repo icon"></a>
-                </div>
-                <p class="project_description">En un trabajo de Bases de Datos, nos pidieron incluir un enlace de ejemplo para una encuesta en el cuerpo de un mail que se enviaría al cambiar el estado de entrega de un producto en una tabla. Decidí ir un poco más allá y realizar una pequeña encuesta para sumar unos puntos, incluso aunque el profesor intentara negarse a otorgarlos (Pregunta 4).</p>
-            </li>
-            <li class="project">
-                <img class="project_image" src="screenshot-PortalTurismo.jpg" alt="Screenshot Portal Turismo">
-                <div class="project_title">
-                    <h2>Portal Turismo</h2>
-                    <a href="https://ruminini.github.io/PortalTurismo/"><img src="deploy-icon.svg" alt="deploy icon"></a>
-                    <a href="https://github.com/Ruminini/PortalTurismo"><img src="repo-icon.svg" alt="repo icon"></a>
-                </div>
-                <p class="project_description">Para Ingenieria de Software tuve que crear una demo de una pagina que tuviese busqueda y publicacion de productos y mostrar la ubicacion de centros de asistencia medica. Utilice leaflet para los mapas, la api de bluelytics para la cotizacion del dolar/euro en la busqueda y la de mercado libre para encontrar productos similares a la hora de publicar y asi elegir un precio acorde.</p>
-            </li>
-        </ul>
-    </div>
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="lib/background.js"></script>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+  </body>
 </html>
