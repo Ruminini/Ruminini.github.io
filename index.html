@@ -1,30 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tobias Rumiz</title>
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="lib/background.js"></script>
-    <script defer src="script.js"></script>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <canvas id="canvas"></canvas>
-		<div id="greeting">
-			<h1>
-				Hi! I'm <br>
-				<span id="name">Tobías Rumiz</span> <br>
-				Full Stack developer
-			</h1>
-		</div>
-    <a class="scroll-arrow" href=".">
-      <svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M5 15L20 30L35 15" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tobias Rumiz</title>
+		<link rel="stylesheet" href="style.css" />
+		<script defer src="lib/background.js"></script>
+		<script defer src="script.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<canvas id="canvas"></canvas>
+		<section id="home">
+			<div id="greeting">
+				<h1>
+					Hi! I'm <br />
+					<span id="name">Tobías Rumiz</span> <br />
+					Full Stack developer
+				</h1>
+			</div>
+			<a class="scroll-arrow" href="#about">
+				<svg
+					width="40"
+					height="40"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M5 15L20 30L35 15"
+						stroke="white"
+						stroke-width="3"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+				</svg>
+			</a>
+		</section>
+		<section id="projects" class="section">
+			<div class="frosted">
+				<h2>Projects</h2>
+			</div>
+		</section>
+		<section id="experience" class="section">
+			<div class="frosted">
+				<h2>Experience</h2>
+			</div>
+		</section>
+		<section id="skills" class="section">
+			<div class="frosted">
+				<h2>Skills</h2>
+			</div>
+		</section>
+		<section id="about" class="section">
+			<div id="about-text" class="frosted">
+				<h2>About Me</h2>
+				<p>
+					I'm a software developer with a solid foundation in backend
+					development and API integrations. I've worked on creating user-focused
+					applications that streamline workflows, from optimizing data entry
+					processes to automating distribution systems. I'm always looking for
+					ways to make processes simpler and more efficient.
+				</p>
+				<p>
+					I'm currently two semesters away from graduating with a five years
+					degree in Computer Science. I also completed two years in
+					electromechanical engineering and studied at a technical high school
+					in the same field.
+				</p>
+				<p>
+					Outside of development, I love tackling creative and technical
+					projects, whether it's building a 3D printer, designing custom
+					keyboards, or diving into whatever sparks my curiosity. I'm always on
+					the lookout for new challenges that combine creativity with practical
+					solutions, pushing me to grow and innovate.
+				</p>
+			</div>
+		</section>
+		<section id="contact" class="section">
+			<div class="frosted">
+				<h2>Get in touch</h2>
+			</div>
+		</section>
+	</body>
 </html>
