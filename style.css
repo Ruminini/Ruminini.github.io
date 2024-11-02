@@ -3,20 +3,20 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-size: 100%;
+	font-family: raleway, sans-serif;
+	color: white;
 }
 
 html {
 	background-color: black;
 	position: relative;
 	scroll-snap-type: y mandatory;
-	font-family: raleway, sans-serif;
 }
 
 body {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	color: white;
 }
 
 section {
@@ -29,7 +29,7 @@ canvas {
 	position: fixed;
 	display: block;
 	width: 100vw;
-	height: 100vh;
+	height: 100lvh;
 }
 
 #greeting {
@@ -69,7 +69,7 @@ h1 > span {
 
 .scroll-arrow {
 	position: absolute;
-	bottom: 30px;
+	top: 90dvh;
 	left: 50%;
 	transform: translateX(-50%);
 	transform: rotate(-90deg);
@@ -129,3 +129,125 @@ p {
 	text-indent: 2.5rem;
 	line-height: 1.5;
 }
+
+#contact-form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+label {
+	display: block;
+}
+
+input,
+textarea,
+button {
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	border: none;
+	background-color: rgba(255, 255, 255, 0.075);
+}
+
+textarea {
+	line-height: 1rem;
+	resize: none;
+	height: 5rem;
+}
+
+button {
+	margin: auto;
+	padding: 0.5rem 1rem;
+	border: 0.075rem solid;
+	background-color: #00000000;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: rgba(255, 255, 255, 0.075);
+}
+
+#contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+	h2 {
+		grid-column: span 2;
+		text-align: center;
+	}
+
+	label {
+		text-align: center;
+	}
+
+	label[for="name"],
+	input[type="text"] {
+		grid-column: 1;
+	}
+	label[for="email"] {
+		grid-row: 2;
+	}
+
+	label[for="email"],
+	input[type="email"] {
+		grid-column: 2;
+	}
+
+	label[for="message"],
+	textarea {
+		grid-column: span 2;
+	}
+
+	button {
+		grid-column: span 2;
+		justify-self: center;
+	}
+}
+
+@media (max-width: 600px) {
+	#contact-form {
+		label,
+		input,
+		textarea,
+		button {
+			grid-column: span 2 !important;
+		}
+		label[for="email"] {
+			grid-row: 4;
+		}
+	}
+}
+
+
+/* Top + Bot linear gradient */
+
+/*
+button, button:after {
+	box-sizing: content-box;
+	position: relative;
+	margin: auto;
+	padding: 0.5rem 1rem;
+	border: 0.2rem solid #3cf67a;
+  border-right: 0;
+  border-left: 0;
+	background-color: #00000000;
+	border-image: linear-gradient( to right, #00000000 5%, #00e639 30%, #00d2e6 70%, #00000000 95%) 1;
+	cursor: pointer;
+}
+
+button:after {
+	position: absolute;
+	top: -0.2rem;
+	bottom: -0.2rem;
+	left: -0.2rem;
+	right: -0.2rem;
+	content:'';
+	border-image: linear-gradient( to right, #00000000 0%, #00e639 30%, #00d2e6 70%, #00000000 100%) 1;
+	opacity: 0;
+	transition: opacity .5s ease-in-out;
+}
+button:hover::after {
+	opacity: 1;
+}
+*/
