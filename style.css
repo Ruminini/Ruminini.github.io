@@ -29,7 +29,7 @@ canvas {
 	position: fixed;
 	display: block;
 	width: 100vw;
-	height: 100lvh;
+	height: 100vh;
 }
 
 #greeting {
@@ -168,18 +168,9 @@ button:hover {
 }
 
 #contact-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-
-	h2 {
-		grid-column: span 2;
-		text-align: center;
-	}
-
-	label {
-		text-align: center;
-	}
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
 
 	label[for="name"],
 	input[type="text"] {
@@ -194,14 +185,11 @@ button:hover {
 		grid-column: 2;
 	}
 
+	h2,
 	label[for="message"],
-	textarea {
-		grid-column: span 2;
-	}
-
+	textarea,
 	button {
 		grid-column: span 2;
-		justify-self: center;
 	}
 }
 
@@ -219,35 +207,29 @@ button:hover {
 	}
 }
 
+input:focus,
+textarea:focus {
+	outline: white solid 0.075rem;
+}
 
-/* Top + Bot linear gradient */
+textarea::-webkit-scrollbar {
+	width: 0.5rem;
+	cursor: default;
+}
 
-/*
-button, button:after {
-	box-sizing: content-box;
-	position: relative;
-	margin: auto;
-	padding: 0.5rem 1rem;
-	border: 0.2rem solid #3cf67a;
-  border-right: 0;
-  border-left: 0;
-	background-color: #00000000;
-	border-image: linear-gradient( to right, #00000000 5%, #00e639 30%, #00d2e6 70%, #00000000 95%) 1;
+textarea::-webkit-scrollbar-thumb {
+	background-color: white;
+	border-radius: 0.5rem;
+	border: 0.075rem solid white;
+	margin-right: 5px !important;
+	margin: 0;
 	cursor: pointer;
 }
 
-button:after {
-	position: absolute;
-	top: -0.2rem;
-	bottom: -0.2rem;
-	left: -0.2rem;
-	right: -0.2rem;
-	content:'';
-	border-image: linear-gradient( to right, #00000000 0%, #00e639 30%, #00d2e6 70%, #00000000 100%) 1;
-	opacity: 0;
-	transition: opacity .5s ease-in-out;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-text-fill-color: white;
+	transition: background-color 5000s ease-in-out 0s;
 }
-button:hover::after {
-	opacity: 1;
-}
-*/
