@@ -103,6 +103,7 @@ h1 > span {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	min-height: fit-content;
 }
 
 .frosted {
@@ -210,6 +211,10 @@ button:hover {
 input:focus,
 textarea:focus {
 	outline: white solid 0.075rem;
+}
+
+.error {
+	outline: red solid 0.075rem;
 }
 
 textarea::-webkit-scrollbar {
