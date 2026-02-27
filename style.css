@@ -11,6 +11,7 @@ html {
 	background-color: black;
 	position: relative;
 	scroll-snap-type: y mandatory;
+	scroll-snap-stop: normal;
 }
 
 body {
@@ -21,7 +22,7 @@ body {
 
 section {
 	position: relative;
-	height: 100vh;
+	min-height: 100vh;
 	scroll-snap-align: start;
 }
 
@@ -30,6 +31,8 @@ canvas {
 	display: block;
 	width: 100vw;
 	height: 100vh;
+	height: 100lvh;
+	bottom: 0;
 }
 
 #greeting {
@@ -44,6 +47,7 @@ h1 {
 	margin-left: 20vw;
 	font-size: 2rem;
 	font-weight: 400;
+	padding: 0.5rem;
 }
 
 h1 > span {
@@ -107,12 +111,12 @@ h1 > span {
 }
 
 .frosted {
-	padding: 2rem;
+	padding: 1rem;
 	background-color: rgba(255, 255, 255, 0.075);
 	backdrop-filter: blur(10px);
-	border-radius: 1rem;
+	border-radius: 0.5rem;
 	max-width: 750px;
-	width: 100%;
+	width: 90%;
 }
 
 #about-text {
