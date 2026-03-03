@@ -3,7 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-size: 100%;
-	font-family: raleway, sans-serif;
+	font-family: montserrat, sans-serif;
 	color: white;
 }
 
@@ -17,7 +17,6 @@ html {
 body {
 	display: flex;
 	flex-direction: column;
-	text-align: center;
 }
 
 section {
@@ -43,6 +42,7 @@ canvas {
 }
 
 h1 {
+	text-align: center;
 	justify-content: center;
 	margin-left: 20vw;
 	font-size: 2rem;
@@ -127,31 +127,16 @@ h1 > span {
 
 h2 {
 	font-size: 2rem;
+	text-transform: uppercase;
+	text-align: left;
+	border-bottom: solid 0.075rem white;
+	padding-bottom: 0;
 }
 
 p {
 	text-align: justify;
 	text-indent: 2.5rem;
 	line-height: 1.5;
-}
-
-#contact-form {
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-}
-
-label {
-	display: block;
-}
-
-input,
-textarea,
-button {
-	padding: 0.5rem;
-	border-radius: 0.5rem;
-	border: none;
-	background-color: rgba(255, 255, 255, 0.075);
 }
 
 textarea {
@@ -175,26 +160,41 @@ button:hover {
 #contact-form {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 1rem;
+	row-gap: 0.25rem;
+	column-gap: 1rem;
 
 	label[for="name"],
 	input[type="text"] {
 		grid-column: 1;
 	}
-	label[for="email"] {
+	label[for="fEmail"] {
 		grid-row: 2;
 	}
 
-	label[for="email"],
+	label[for="fEmail"],
 	input[type="email"] {
 		grid-column: 2;
 	}
 
 	h2,
-	label[for="message"],
+	label[for="fMessage"],
 	textarea,
 	button {
 		grid-column: span 2;
+	}
+
+	input,
+	textarea,
+	button {
+		padding: 0.5rem;
+		border-radius: 0.5rem;
+		border: none;
+		background-color: rgba(255, 255, 255, 0.075);
+	}
+
+	label,
+	button {
+		margin-top: 0.75rem;
 	}
 }
 
@@ -206,8 +206,11 @@ button:hover {
 		button {
 			grid-column: span 2 !important;
 		}
-		label[for="email"] {
+		label[for="fEmail"] {
 			grid-row: 4;
+		}
+		textarea {
+			height: 9rem;
 		}
 	}
 }
@@ -239,6 +242,52 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
+	-webkit-background-clip: text;
 	-webkit-text-fill-color: white;
 	transition: background-color 5000s ease-in-out 0s;
+	box-shadow: inset 0 0 20px 20px rgba(255, 255, 255, 0.075);
+}
+
+#projects .frosted {
+	width: 100%;
+	max-width: calc(300px * 3 + 4rem);
+}
+@media screen and (max-width: calc(300px * 3 + 6rem)) {
+	#projects .frosted {
+		width: calc(300px * 2 + 3rem);
+	}
+}
+@media screen and (max-width: calc(300px * 2 + 5rem)) {
+	#projects .frosted {
+		width: calc(300px + 2rem);
+	}
+}
+
+#projects-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.project-card {
+	width: 300px;
+	max-width: 70vw;
+	gap: 1rem;
+	border-radius: 0.5rem;
+	background-color: rgba(255, 255, 255, 0.075);
+	overflow: hidden;
+	.project-text {
+		padding: 0.5rem;
+	}
+	p {
+		text-align: left;
+		text-indent: 0;
+		font-size: small;
+	}
+	img {
+		width: 100%;
+		display: block;
+		aspect-ratio: 16/9;
+	}
 }

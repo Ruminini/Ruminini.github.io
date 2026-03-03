@@ -12,7 +12,7 @@
 	<link rel="icon" href="assets/LOGO.svg" type="image/svg+xml">
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -33,22 +33,61 @@
 	</section>
 	<section id="projects" class="section">
 		<div class="frosted">
-			<h2>Projects</h2>
-		</div>
-	</section>
-	<section id="experience" class="section">
-		<div class="frosted">
-			<h2>Experience</h2>
+			<h2>What I've built</h2>
+			<div id="projects-container">
+				<div class="project-card">
+					<img class="project-image" src="assets/Foodpass.png" alt="Foodpass" />
+					<div class="project-text">
+						<h3>Foodpass</h3>
+						<p>Smart enterprise food ordering with facial authentication.</p>
+					</div>
+				</div>
+				<div class="project-card">
+					<img class="project-image" src="assets/UNGSPortal.png" alt="UNGS Portal" />
+					<div class="project-text">
+						<h3>UNGS Portal</h3>
+						<p>Centralizing fragmented university information into one structured platform.</p>
+					</div>
+				</div>
+				<div class="project-card">
+					<img class="project-image" src="assets/VendingSystem.png" alt="VendingSystem" />
+					<div class="project-text">
+						<h3>VendingSystem</h3>
+						<p>QR-based controlled vending machine authorization platform.</p>
+					</div>
+				</div>
+				<div class="project-card">
+					<img class="project-image" src="assets/keyra.png" alt="Keyra" />
+					<div class="project-text">
+						<h3>Keyra</h3>
+						<p>Automated document processing pipeline for high-volume workflows.</p>
+					</div>
+				</div>
+				<div class="project-card">
+					<img class="project-image" src="assets/eviltwin.png" alt="Evil Twin" />
+					<div class="project-text">
+						<h3>Evil Twin</h3>
+						<p>Embedded captive portal simulation demonstrating real-world attack vectors.</p>
+					</div>
+				</div>
+				<div class="project-card">
+					<img class="project-image" src="assets/project6.png" alt="New Project" />
+					<div class="project-text">
+						<h3>Have an idea?</h3>
+						<p>Let's make your idea our next project!</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 	<section id="skills" class="section">
 		<div class="frosted">
-			<h2>Skills</h2>
+			<h2>What I work with</h2>
 		</div>
 	</section>
 	<section id="about" class="section">
 		<div id="about-text" class="frosted">
-			<h2>About Me</h2>
+			<h2>Who I am</h2>
 			<p>
 				I'm a software developer with a solid foundation in backend
 				development and API integrations. I've worked on creating user-focused
@@ -74,11 +113,11 @@
 	<section id="contact" class="section">
 		<form id="contact-form" class="frosted">
 			<h2>Get in touch</h2>
-			<label for="name">Name</label>
-			<input type="text" id="fName" name="name" />
-			<label for="email">Email</label>
-			<input type="email" id="fEmail" name="email" />
-			<label for="message">Message</label>
+			<label for="fName">Name</label>
+			<input type="text" id="fName" name="name" autocomplete="name" />
+			<label for="fEmail">Email</label>
+			<input type="email" id="fEmail" name="email" autocomplete="email" />
+			<label for="fMessage">Message</label>
 			<textarea id="fMessage" name="message"></textarea>
 			<button type="submit">Submit</button>
 		</form>
