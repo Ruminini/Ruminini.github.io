@@ -8,7 +8,7 @@
 	<title>Tobias Rumiz</title>
 	<link rel="stylesheet" href="style.css" />
 	<script defer type="module" src="lib/background.js"></script>
-	<script defer src="script.js"></script>
+	<script defer type="module" src="script.js"></script>
 	<link rel="icon" href="assets/LOGO.svg" type="image/svg+xml">
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -112,14 +112,15 @@
 	</section>
 	<section id="contact" class="section">
 		<form id="contact-form" class="frosted">
-			<h2>Get in touch</h2>
+			<h2 id="fTitle">Get in touch</h2>
 			<label for="fName">Name</label>
 			<input type="text" id="fName" name="name" autocomplete="name" />
 			<label for="fEmail">Email</label>
 			<input type="email" id="fEmail" name="email" autocomplete="email" />
 			<label for="fMessage">Message</label>
 			<textarea id="fMessage" name="message"></textarea>
-			<button type="submit">Submit</button>
+			<button id="fSubmit" type="submit">Submit</button>
+			<button id="fReset" type="reset" hidden>Send another message</button>
 		</form>
 	</section>
 </body>

@@ -162,11 +162,10 @@ button:hover {
 	grid-template-columns: 1fr 1fr;
 	row-gap: 0.25rem;
 	column-gap: 1rem;
+	overflow: hidden;
+	height: 20rem;
+	transition: height 0.3s ease-in-out;
 
-	label[for="name"],
-	input[type="text"] {
-		grid-column: 1;
-	}
 	label[for="fEmail"] {
 		grid-row: 2;
 	}
@@ -197,9 +196,16 @@ button:hover {
 		margin-top: 0.75rem;
 	}
 }
+#contact-form[view="only-title"] {
+	height: 4.5rem;
+}
+#contact-form[view="title-and-again"] {
+	height: 8rem;
+}
 
 @media (max-width: 600px) {
 	#contact-form {
+		height: 28.5rem;
 		label,
 		input,
 		textarea,
@@ -212,6 +218,12 @@ button:hover {
 		textarea {
 			height: 9rem;
 		}
+	}
+	#contact-form[view="only-title"] {
+		height: 9rem;
+	}
+	#contact-form[view="title-and-again"] {
+		height: 13rem;
 	}
 }
 
