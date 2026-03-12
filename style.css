@@ -10,8 +10,9 @@
 html {
 	background-color: black;
 	position: relative;
-	scroll-snap-type: y mandatory;
-	scroll-snap-stop: normal;
+	/* scroll-snap-type: y mandatory;
+	scroll-snap-stop: normal; */
+	scroll-behavior: smooth;
 }
 
 body {
@@ -114,7 +115,7 @@ h1 > span {
 	padding: 1rem;
 	background-color: rgba(255, 255, 255, 0.075);
 	backdrop-filter: blur(10px);
-	border-radius: 0.5rem;
+	border-radius: 0.75rem;
 	max-width: 750px;
 	width: 90%;
 }
@@ -186,7 +187,7 @@ button:hover {
 	textarea,
 	button {
 		padding: 0.5rem;
-		border-radius: 0.5rem;
+		border-radius: 0.25rem;
 		border: none;
 		background-color: rgba(255, 255, 255, 0.075);
 	}
@@ -195,12 +196,22 @@ button:hover {
 	button {
 		margin-top: 0.75rem;
 	}
+	#fTitle {
+		height: 2.5rem;
+		overflow: hidden;
+	}
 }
 #contact-form[view="only-title"] {
 	height: 4.5rem;
+	#fTitle {
+		height: 2.5rem;
+	}
 }
 #contact-form[view="title-and-again"] {
 	height: 8rem;
+	#fTitle {
+		height: 2.5rem;
+	}
 }
 
 @media (max-width: 600px) {
@@ -218,12 +229,21 @@ button:hover {
 		textarea {
 			height: 9rem;
 		}
+		#fTitle {
+			height: 2.5rem;
+		}
 	}
 	#contact-form[view="only-title"] {
-		height: 9rem;
+		height: 7rem;
+		#fTitle {
+			height: 5rem;
+		}
 	}
 	#contact-form[view="title-and-again"] {
 		height: 13rem;
+		#fTitle {
+			height: 7.5rem;
+		}
 	}
 }
 
@@ -243,7 +263,7 @@ textarea::-webkit-scrollbar {
 
 textarea::-webkit-scrollbar-thumb {
 	background-color: white;
-	border-radius: 0.5rem;
+	border-radius: 0.25rem;
 	border: 0.075rem solid white;
 	margin-right: 5px !important;
 	margin: 0;
@@ -284,22 +304,90 @@ input:-webkit-autofill:active {
 
 .project-card {
 	width: 300px;
-	max-width: 70vw;
+	max-width: 90vw;
 	gap: 1rem;
-	border-radius: 0.5rem;
+	border-radius: 0.25rem;
 	background-color: rgba(255, 255, 255, 0.075);
 	overflow: hidden;
 	.project-text {
 		padding: 0.5rem;
+	}
+	.project-title {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 1.5rem;
 	}
 	p {
 		text-align: left;
 		text-indent: 0;
 		font-size: small;
 	}
-	img {
+	.project-image {
 		width: 100%;
 		display: block;
 		aspect-ratio: 16/9;
+	}
+	.logos img {
+		filter: brightness(0%) invert(1);
+		transition: filter 0.1s ease-in-out;
+		aspect-ratio: 1/1;
+		width: 1.5rem;
+	}
+	.logos img:hover {
+		filter: brightness(100%) invert(0) drop-shadow(1px 1px 1px #fff)
+			drop-shadow(1px -1px 1px #fff) drop-shadow(-1px 1px 1px #fff);
+	}
+}
+
+.new-project {
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.5);
+	/* border: 0.075rem solid white; */
+	cursor: pointer;
+	animation: borderAnimation 8s ease-out infinite;
+	box-shadow: inset 0 0 2px 0.075rem white;
+
+	.project-title {
+		justify-content: center;
+	}
+	p {
+		text-align: center;
+	}
+
+	svg {
+		position: absolute;
+		display: none;
+	}
+	.line {
+		stroke-dasharray: 0.25;
+		stroke-width: 2px;
+		fill: transparent;
+		stroke: rgba(255, 255, 255, 0.5);
+		animation: svgAnimation 8s linear infinite;
+	}
+}
+@keyframes borderAnimation {
+	0% {
+		/* border-color: rgba(255, 255, 255, 0.25); */
+		box-shadow: inset 0 0 2px 0.075rem rgba(255, 255, 255, 0.1);
+	}
+	45% {
+		/* border-color: rgba(255, 255, 255, 1); */
+		box-shadow: inset 0 0 2px 0.075rem rgba(255, 255, 255, 1);
+	}
+	85%,
+	100% {
+		/* border-color: rgba(255, 255, 255, 0.25); */
+		box-shadow: inset 0 0 2px 0.075rem rgba(255, 255, 255, 0.1);
+	}
+}
+@keyframes svgAnimation {
+	from {
+		stroke-dashoffset: 0;
+	}
+	to {
+		stroke-dashoffset: 1;
 	}
 }

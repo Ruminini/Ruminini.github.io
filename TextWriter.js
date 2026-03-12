@@ -50,7 +50,12 @@ export class TextWriter {
 
 	async #applyEdits() {
 		this.#element.setAttribute("cursor", "typing");
-		while (this.#currentText !== this.#targetText) {
+		let timedOut = false;
+		const timeout = setTimeout(() => {
+			this.#element.textContent = this.#targetText;
+			timedOut = true;
+		}, 8000);
+		while (this.#currentText !== this.#targetText && !timedOut) {
 			const edit = this.#findNextEdit();
 			if (!edit) break;
 
@@ -63,6 +68,7 @@ export class TextWriter {
 				await this.#typeChars(edit.chars);
 			}
 		}
+		clearTimeout(timeout);
 		this.#element.setAttribute("cursor", "waiting");
 	}
 
