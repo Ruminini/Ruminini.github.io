@@ -64,3 +64,7 @@ function changeReset() {
 	[...form.children].forEach((child) => (child.hidden = child.id == "fReset"));
 	form.removeAttribute("view");
 }
+
+alert(
+	"This portfolio is currently in development!\n I'll try to get it done before march ends.",
+);
