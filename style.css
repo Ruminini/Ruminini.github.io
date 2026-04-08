@@ -329,16 +329,24 @@ input:-webkit-autofill:active {
 		display: block;
 		aspect-ratio: 16/9;
 	}
-	.logos img {
-		filter: brightness(0%) invert(1);
-		transition: filter 0.1s ease-in-out;
-		aspect-ratio: 1/1;
-		width: 1.5rem;
-	}
-	.logos img:hover {
-		filter: brightness(100%) invert(0) drop-shadow(1px 1px 1px #fff)
-			drop-shadow(1px -1px 1px #fff) drop-shadow(-1px 1px 1px #fff);
-	}
+}
+.skill img,
+.logos img {
+	filter: brightness(0%) invert(1);
+	transition: filter 0.1s ease-in-out;
+	aspect-ratio: 1/1;
+	width: 1.5rem;
+}
+.skill img {
+	width: 6rem;
+}
+.skill img:hover {
+	filter: brightness(100%) invert(0) drop-shadow(2px 2px 3px #fff)
+		drop-shadow(2px -2px 3px #fff) drop-shadow(-2px 2px 3px #fff);
+}
+.logos img:hover {
+	filter: brightness(100%) invert(0) drop-shadow(1px 1px 1px #fff)
+		drop-shadow(1px -1px 1px #fff) drop-shadow(-1px 1px 1px #fff);
 }
 
 .new-project {
@@ -406,4 +414,36 @@ input:-webkit-autofill:active {
 	to {
 		stroke-dashoffset: 1;
 	}
+}
+.skill {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+}
+.skills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-top: 0.5rem;
+	justify-content: center;
+}
+
+#skills-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 1.5rem;
+	margin-top: 1.5rem;
+	h3 {
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 1rem;
+		font-weight: normal;
+	}
+}
+
+.skill-section {
+	width: fit-content;
 }
