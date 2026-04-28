@@ -65,6 +65,14 @@ function changeReset() {
 	form.removeAttribute("view");
 }
 
-alert(
-	"This portfolio is currently in development!\n I'll try to get it done before march ends.",
-);
+const sections = document.querySelectorAll(".section");
+const lastSection = sections[sections.length - 1];
+
+function updateMargin() {
+	const h = lastSection.offsetHeight;
+	const margin = (window.innerHeight - h) / 2;
+	lastSection.style.marginBottom = `${margin}px`;
+}
+
+updateMargin();
+window.addEventListener("resize", updateMargin);
